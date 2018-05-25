@@ -2,6 +2,22 @@
     ViewBag.Title = "Home Page";
 }
 <h1>Please Log In</h1>
-Username: <input type="text" name="username" id="username"/>
-Password: <input type="text" name="password" id="password"/>
-<input type="submit" value="" id="submit"/>
+<form action="Home/Login" method="get" id="colorChooser">
+    Username: <input type="text" name="username" value=@Session["username"] /><br />
+    Password: <input type="text" name="password" value=@Session["password"] /><br />
+    Favorite color:
+    <select name="colorChooser" id="colorChooser" value=@Session["color"]>
+        <option value="pink">Pink</option>
+        <option value="blue">Blue</option>
+        <option value="orange">Orange</option>
+        <option value="red">Red</option>
+    </select><br />
+    <input type="submit" value="Submit" id="submitBtn" onclick="" /> 
+</form>
+
+
+<script>
+
+
+</script>
+

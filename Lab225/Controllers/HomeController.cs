@@ -26,5 +26,23 @@ namespace Lab225.Controllers
 
             return View();
         }
+        public ActionResult Login(string username, string password, string color)
+        {
+            ViewBag.FullName = username;
+            ViewBag.Password = password;
+            ViewBag.Color = color;
+
+            Session["username"] = username;
+            Session["password"] = password;
+            Session["color"] = color;
+
+            return View();
+        }
+        public ActionResult Logout()//make a new view for this
+        {
+            Session.Clear();
+            return View();
+        }
+    
     }
 }
